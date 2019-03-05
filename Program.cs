@@ -20,15 +20,32 @@ namespace mostCommonWords
             foreach(string word in wordsList)
             {
                 // Console.WriteLine(word);
-                wordsDictionary.Add(new Dictionary<string, int>(){ {word, 0} });
+                wordsDictionary.Add(new Dictionary<string, int>(){ {word, 1} });
             }
 
+            Dictionary<string, int> finalAnswerBeforeSort = new Dictionary<string, int>();
+            List<string> testList = new List<string>();
             foreach(Dictionary<string, int> wordProcessed in wordsDictionary)
             {
                 foreach(KeyValuePair<string,int> kvp in wordProcessed)
                 {
-                    Console.WriteLine($"Key: {kvp.Key}  Value:{kvp.Value}");
+                    // Console.WriteLine($"Key: {kvp.Key}  Value:{kvp.Value}");
+                    if(!finalAnswerBeforeSort.ContainsKey(kvp.Key.ToLower())) {
+                        finalAnswerBeforeSort.Add(kvp.Key.ToLower(), kvp.Value);
+                    } else {
+                        finalAnswerBeforeSort[kvp.Key.ToLower()] += 1;
+                        testList.Add($"{kvp.Key.ToLower()}-{finalAnswerBeforeSort[kvp.Key.ToLower()] += 1}");
+                    }
                 }
+            }
+
+            // foreach(KeyValuePair<string, int> kvp in finalAnswerBeforeSort) {
+            //     Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+            // }
+
+
+            foreach(string wordAndNum in testList){
+                Console.WriteLine(wordAndNum);
             }
 
         }
