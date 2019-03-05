@@ -14,12 +14,22 @@ namespace mostCommonWords
             List<string> wordsList = new List<string>();
             wordsList.AddRange(wordsSplitUp);
 
+            List<Dictionary<string, int>> wordsDictionary =new List<Dictionary<string, int>>();
+
+
             foreach(string word in wordsList)
             {
-                Console.WriteLine(word);
+                // Console.WriteLine(word);
+                wordsDictionary.Add(new Dictionary<string, int>(){ {word, 0} });
             }
 
-
+            foreach(Dictionary<string, int> wordProcessed in wordsDictionary)
+            {
+                foreach(KeyValuePair<string,int> kvp in wordProcessed)
+                {
+                    Console.WriteLine($"Key: {kvp.Key}  Value:{kvp.Value}");
+                }
+            }
 
         }
     }
