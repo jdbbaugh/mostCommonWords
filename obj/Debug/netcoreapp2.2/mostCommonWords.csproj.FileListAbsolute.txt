@@ -1,0 +1,11 @@
+/Users/josephbaugh/workspace/NSS/backEnd/1book/5chap/mostCommonWords/bin/Debug/netcoreapp2.2/mostCommonWords.deps.json
+/Users/josephbaugh/workspace/NSS/backEnd/1book/5chap/mostCommonWords/bin/Debug/netcoreapp2.2/mostCommonWords.runtimeconfig.json
+/Users/josephbaugh/workspace/NSS/backEnd/1book/5chap/mostCommonWords/bin/Debug/netcoreapp2.2/mostCommonWords.runtimeconfig.dev.json
+/Users/josephbaugh/workspace/NSS/backEnd/1book/5chap/mostCommonWords/bin/Debug/netcoreapp2.2/mostCommonWords.dll
+/Users/josephbaugh/workspace/NSS/backEnd/1book/5chap/mostCommonWords/bin/Debug/netcoreapp2.2/mostCommonWords.pdb
+/Users/josephbaugh/workspace/NSS/backEnd/1book/5chap/mostCommonWords/obj/Debug/netcoreapp2.2/mostCommonWords.csprojAssemblyReference.cache
+/Users/josephbaugh/workspace/NSS/backEnd/1book/5chap/mostCommonWords/obj/Debug/netcoreapp2.2/mostCommonWords.csproj.CoreCompileInputs.cache
+/Users/josephbaugh/workspace/NSS/backEnd/1book/5chap/mostCommonWords/obj/Debug/netcoreapp2.2/mostCommonWords.AssemblyInfoInputs.cache
+/Users/josephbaugh/workspace/NSS/backEnd/1book/5chap/mostCommonWords/obj/Debug/netcoreapp2.2/mostCommonWords.AssemblyInfo.cs
+/Users/josephbaugh/workspace/NSS/backEnd/1book/5chap/mostCommonWords/obj/Debug/netcoreapp2.2/mostCommonWords.dll
+/Users/josephbaugh/workspace/NSS/backEnd/1book/5chap/mostCommonWords/obj/Debug/netcoreapp2.2/mostCommonWords.pdb
