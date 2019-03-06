@@ -43,11 +43,14 @@ namespace mostCommonWords
 
 
             List<KeyValuePair<string, int>> sorted =(from kv in finalAnswerBeforeSort orderby kv.Value select kv).ToList();
-            // sorted.Reverse();
-                        foreach (KeyValuePair<string, int> kv in sorted)
-            {
-                Console.WriteLine("{0}={1}", kv.Key, kv.Value);
-            }
+            sorted.Reverse();
+            List<KeyValuePair<string, int>> smallRange = sorted.GetRange(0,10);
+            int count = 1;
+            foreach (KeyValuePair<string, int> kv in smallRange)
+                {
+                    Console.WriteLine("{0}: {1}={2}", count ,kv.Key, kv.Value);
+                    count++;
+                }
 
             // List<string> listForSorting = new List<string>();
 
