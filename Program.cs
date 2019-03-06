@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace mostCommonWords
 {
@@ -38,15 +39,28 @@ namespace mostCommonWords
                     }
                 }
             }
+            string notNum = "11";
+            Int32.Parse(notNum);
+
+            List<string> listForSorting = new List<string>();
 
             foreach(KeyValuePair<string, int> kvp in finalAnswerBeforeSort) {
-                Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+                // Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+                listForSorting.Add($"{kvp.Key}: {kvp.Value.ToString()}");
             }
 
 
-            // foreach(string wordAndNum in testList){
-            //     Console.WriteLine(wordAndNum);
-            // }
+            foreach(string wordAndNum in listForSorting){
+                string[] numbers = Regex.Split(wordAndNum, @"\D+");
+                foreach(string value in numbers){
+                        if (!string.IsNullOrEmpty(value))
+                            {
+                            int i = int.Parse(value);
+                            Console.WriteLine($"{wordAndNum}, WHOAAAAAA: {value}");
+                            }
+
+                }
+            }
 
         }
     }
