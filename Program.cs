@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace mostCommonWords
@@ -35,32 +36,40 @@ namespace mostCommonWords
                         finalAnswerBeforeSort.Add(kvp.Key.ToLower(), kvp.Value);
                     } else {
                         finalAnswerBeforeSort[kvp.Key.ToLower()] += 1;
-                        // testList.Add($"{kvp.Key.ToLower()}-{finalAnswerBeforeSort[kvp.Key.ToLower()] += 1}");
+
                     }
                 }
             }
-            string notNum = "11";
-            Int32.Parse(notNum);
 
-            List<string> listForSorting = new List<string>();
 
-            foreach(KeyValuePair<string, int> kvp in finalAnswerBeforeSort) {
-                // Console.WriteLine($"{kvp.Key}: {kvp.Value}");
-                listForSorting.Add($"{kvp.Key}: {kvp.Value.ToString()}");
+            List<KeyValuePair<string, int>> sorted =(from kv in finalAnswerBeforeSort orderby kv.Value select kv).ToList();
+            // sorted.Reverse();
+                        foreach (KeyValuePair<string, int> kv in sorted)
+            {
+                Console.WriteLine("{0}={1}", kv.Key, kv.Value);
             }
 
+            // List<string> listForSorting = new List<string>();
 
-            foreach(string wordAndNum in listForSorting){
-                string[] numbers = Regex.Split(wordAndNum, @"\D+");
-                foreach(string value in numbers){
-                        if (!string.IsNullOrEmpty(value))
-                            {
-                            int i = int.Parse(value);
-                            Console.WriteLine($"{wordAndNum}, WHOAAAAAA: {value}");
-                            }
+            // foreach(KeyValuePair<string, int> kvp in finalAnswerBeforeSort) {
+            //     Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+                // listForSorting.Add($"{kvp.Key}: {kvp.Value.ToString()}");
+            // }
 
-                }
-            }
+
+
+
+            // foreach(string wordAndNum in listForSorting){
+            //     string[] numbers = Regex.Split(wordAndNum, @"\D+");
+            //     foreach(string value in numbers){
+            //             if (!string.IsNullOrEmpty(value))
+            //                 {
+            //                 int i = int.Parse(value);
+            //                 Console.WriteLine($"{wordAndNum}, {i}");
+            //                 }
+
+            //     }
+            // }
 
         }
     }
